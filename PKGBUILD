@@ -1,11 +1,11 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
-pkgbase=linux-zen
-pkgver=6.4.2.zen1
+pkgbase=linux-zen-amd-patch
+pkgver=6.4.2.zen
 pkgrel=1
 pkgdesc='Linux ZEN'
-_srctag=v${pkgver%.*}-${pkgver##*.}
-url="https://github.com/zen-kernel/zen-kernel/commits/$_srctag"
+_srctag=v6.4.2-zen-amd-patch1
+url="https://github.com/KosmX/zen-kernel/commits/$_srctag"
 arch=(x86_64)
 license=(GPL2)
 makedepends=(
@@ -26,9 +26,9 @@ makedepends=(
   texlive-latexextra
 )
 options=('!strip')
-_srcname=zen-kernel
+_srcname=zen-kernel-amd-patch
 source=(
-  "$_srcname::git+https://github.com/zen-kernel/zen-kernel?signed#tag=$_srctag"
+  "$_srcname::git+https://github.com/KosmX/zen-kernel?tag=$_srctag"
   config  # the main kernel config file
 )
 validpgpkeys=(
